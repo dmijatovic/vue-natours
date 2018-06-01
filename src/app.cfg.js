@@ -4,16 +4,15 @@
  * this is initial idea
  */
  export const cfg={
-  appTitle:'Outdoors',
-  appSubtitle: 'The space wehere we can hide',   
+  //appTitle:'Outdoors',
+  //appSubtitle: 'The space wehere we can hide',   
+  //HERO section
   hero:{
-    cta:{
-      title:'',
-      subtitle:'',
-      button:{
-        label:'',
-        link:''
-      }
+    title:'Outdoor',
+    subtitle:'The place full of joy',
+    cta:{      
+      label:'Click here for the magic',
+      link:'#'
     },
     logo:{
       img:'img/logo-white.png'

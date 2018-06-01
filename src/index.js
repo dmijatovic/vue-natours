@@ -5,7 +5,7 @@ import Vue from 'vue';
 import App from './app.vue';
 
 //main - shared - styles
-import './css/app.scss';
+import './css/main.scss';
 
 /*
 //use router

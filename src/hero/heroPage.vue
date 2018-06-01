@@ -1,8 +1,8 @@
 <template>
-  <header class="page-header">    
+  <header class="hero">    
 
-    <div class="logo-box">
-      <img :src="logo" class="logo" alt="Logo" />
+    <div class="hero-logo-box">
+      <img :src="logo" class="hero-logo" alt="Logo" />
     </div>
     <div class="hero-content">
       <!-- h1 important for SEO include website title-->
@@ -11,8 +11,8 @@
         <span class="heading-primary-sub">{{ siteSubtitle }}</span>
       </h1>
       <div class="cta-section">
-        <a href="#" class="btn btn-lg btn-white ripple">
-          Click here to see magic
+        <a :href="cta.link" class="btn btn-lg btn-white ripple">
+          {{cta.label}}
         </a>
       </div>
     </div>    
@@ -27,8 +27,9 @@ export default {
   data(){
     return {
       logo:cfg.hero.logo.img,
-      siteTitle: cfg.appTitle,
-      siteSubtitle: cfg.appSubtitle
+      siteTitle: cfg.hero.title,
+      siteSubtitle: cfg.hero.subtitle,
+      cta: cfg.hero.cta
     }
   }
 }

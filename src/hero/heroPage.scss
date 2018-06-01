@@ -1,7 +1,7 @@
 @import '../css/variables';
 @import '../css/animations';
 
-.page-header{ 
+.hero{ 
   position: relative;
   display: flex;
   justify-content: center;
@@ -17,22 +17,27 @@
   //clip-path to create image cut effect
   //polygoon (x-left-top y-left-top, x-right-top y-right-top, x-bottom-right y-bottom-right)
   clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+
+  //& wil repeat parent selector
+  //note! this is not nesting for specificity but the trick 
+  //for visual nesting while keeping low specificy (based on BEM idea)
+  &-logo-box{
+    //parent has relative position
+    position: absolute;
+    top: 40px;
+    left: 40px;  
+  }
+
+  &-logo{
+    height: 35px;
+  }
+  
+  &-content{
+    align-self: center;  
+  }
 }
 
-.logo-box{
-  //parent has relative position
-  position: absolute;
-  top: 40px;
-  left: 40px;  
-}
 
-.logo{
-  height: 35px;
-}
-
-.hero-content{
-  align-self: center;  
-}
 
 .heading-primary{
   color: #fff;

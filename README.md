@@ -23,7 +23,7 @@ The following vue components are created for this website demo.
 - heroPage: component to cover hero section of single 'smooth' scroll website (we are making here)
 - 
 
-## My learnings (things to remember)
+## Things to remember
 
 In this section I will note specific items from the course I find useful.
 
@@ -68,11 +68,24 @@ $color: #efefef;
 }
 body{
   margin:0, padding:0;
-  //MIXIN use it
+  //MIXIN - use it
   @include main-font;
 }
 
+//ATTRIBUTE selector and partial value matching
+//select all elements with attribute class THAT...
+//^ => start with "col-"
+//* => contains "col-"
+//$ => ends with "col-"
+[class^="col-"]{
+  background-color: red;
+}
+  
+
 ```
+
+
+
 
 ### Animations
 

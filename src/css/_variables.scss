@@ -1,6 +1,7 @@
 
 //colors 
 $light-color: #fff;
+//$light-grey-color:""
 $grey-color: #777;
 $dark-color: #333;
 $light-color-contrast: $dark-color;
@@ -31,10 +32,16 @@ $rem-2x: 2rem;
 $rem-3x: 3rem;
 $rem-4x: 4rem;
 $rem-5x: 5rem;
+$rem-10: 10rem;
+$rem-20: 20rem;
 
 //fonts 
 $font-family: 'Lato', sans-serif;
 /* use $rem-xs for font-size*/
+
+$font-size-sm: $rem-md;
+$font-size-md: $rem-xl;
+$font-size-lg: $rem-2x;
 
 $font-weight-xs: 100;
 $font-weight-sm: 300;
@@ -55,3 +62,10 @@ $line-height-2x: 2;
 $box-shadow-color: rgba(0,0,0,.2);
 $box-shadow-xs: 0 0.1rem 0.5rem $box-shadow-color;
 $box-shadow-sm: 0 0.2rem 1rem $box-shadow-color;
+
+//GRID size
+//max width set to 1600px (default)
+$grid-width: 90rem;
+$gutter: $rem-2x;
+$gutter-horizontal: $rem-2x;
+$gutter-vertical: $rem-2x;

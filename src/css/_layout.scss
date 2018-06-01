@@ -1,0 +1,38 @@
+
+@import 'variables';
+
+*,
+*::before,
+*::after{
+  margin:0;
+  padding:0;
+  //all elements will inherit from the body
+  //where we set box-sizing: border-box
+  box-sizing: inherit;
+}
+
+html{
+  /** FONT size and relative sizes calculation using rem
+  we want to enable user to set the fontsize but we also need
+  easy way to calculate out rem units. To achieve both the following
+  approach is advised. Default font size is 16px. So setting font size
+  to 100% we now that our starting size for 1rem = 16px. It would be easer 
+  for us if we can set start to 10px so we can easily use decimals in rem,
+  for example 10px = 1rem => 1.65rem = 16.5px. To achive easy math we 
+  can set font size to 10/16 = 62.5%. Note! when changin size here 
+  the complete layout will change because most of dimensions are set 
+  in rem units. 
+
+  I want to try to keep 100% here and use scaled rem steps. For example,
+  if we assume 16px as starting point, we scale in steps of 0.25 rem (4px).
+  see _variables for defined rem size variables
+  */
+  font-size: 100%;
+}
+
+body{
+  font-family: 'Lato', sans-serif;
+  color: $grey-color;
+  padding: $rem-lg;
+  box-sizing: border-box;  
+}

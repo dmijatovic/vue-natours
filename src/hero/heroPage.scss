@@ -1,0 +1,84 @@
+@import '../css/variables';
+@import '../css/animations';
+
+.page-header{ 
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 95vh;
+  //multiple images at background - lastone is at the top
+  //gradient uses opacity
+  background-image: linear-gradient(
+    to right bottom, 
+    $gradient-start, 
+    $gradient-end), 
+    url('../../assets/img/hero.jpg');
+  background-position: top;
+  //clip-path to create image cut effect
+  //polygoon (x-left-top y-left-top, x-right-top y-right-top, x-bottom-right y-bottom-right)
+  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+}
+
+.logo-box{
+  //parent has relative position
+  position: absolute;
+  top: 40px;
+  left: 40px;  
+}
+
+.logo{
+  height: 35px;
+}
+
+.hero-content{
+  align-self: center;  
+}
+
+.heading-primary{
+  color: #fff;
+  text-transform: uppercase;
+  //this prevents flyin animation 
+  //of child elements from shaking
+  backface-visibility: hidden;
+}
+
+.heading-primary-main{
+  display: block;
+  font-size: $rem-4x;
+  font-weight: $font-weight-md;
+  line-height: $rem-4x * $line-height-md;
+  letter-spacing: $rem-4x / 2;
+  
+  //apply css animation 
+  animation-name: flyInFromTop;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  /*  
+  animation-delay: 1s;
+  animation-iteraction-count:
+  ..etc
+  */
+}
+
+.heading-primary-sub{
+  display: block;
+  font-size: $rem-md;
+  font-weight: $font-weight-md;
+  letter-spacing: $rem-md * 1.2;
+  text-align: center;
+
+  animation-name: flyInFromTop;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+.cta-section{
+  display: flex;
+  flex-direction: column;
+  padding: $rem-2x $rem-md;
+
+  animation-name: flyInFromBottom;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+
+}

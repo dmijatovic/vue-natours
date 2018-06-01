@@ -20,4 +20,65 @@ The difference between `original` SCSS training and this repo is that all `parts
 
 The following vue components are created for this website demo.
 
-- heroPage: 
+- heroPage: component to cover hero section of single 'smooth' scroll website (we are making here)
+- 
+
+## My learnings (things to remember)
+
+In this section I will note specific items from the course I find useful.
+
+- clip-path: [clipping squared image into shape](https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path)
+
+- specficity rule (calculation) and pseudo classes like :hover. :hover counts as for one class in the specificity calculation. When :hover does not work check more specific styles of that element and adjust because these win the specificity calculation from you :hover styling.
+
+- em & rem units. rem calculates from the root font size. em calculates different for font-size and other props (length). For example, 2em applied to font-size will calculate 2 x parent font-size. The padding or margin of 2em will result in 2 x current element font-size! So you can use rem and em for defining size of other elements than font, but remember that ratio is based on the font-size. Rem is more stabile because it always uses root font-size.
+
+- inheritance: not all CSS properties are inherited from parent. In general props related to text are inherited. To know whone are check element specification on MDN, [example backgound](https://developer.mozilla.org/en-US/docs/Web/CSS/background)
+
+- BEM (Block-Element-Modifier) approach. Enables use of low(er) importance classes by making class names more specific. There are 3 parts to use in className: component/block, element, modifier.
+
+- display "inline-block" is used when you need padding on inline element.
+
+- SCSS 'operators'
+
+``` scss
+
+$color: #efefef;
+
+.parent{
+  // & wil repeat slector name.
+  //stands for parent:hover
+  &:hover{
+    //darken wil make color darker
+    background-color: darken($color, 15%);
+  }
+  // & wil repeat slector name.
+  //stands for parent:active
+  &:active{
+    //darken wil make color ligter ca. 10%
+    background-color: lighten($color, 10%);
+  }
+  //scss can calculate colors
+}
+
+// MIXIN - define
+@mixin main-font{
+  font-family: Arial;
+  font-size:400;
+}
+body{
+  margin:0, padding:0;
+  //MIXIN use it
+  @include main-font;
+}
+
+```
+
+### Animations
+
+```scss
+.parent{
+  //prevents shaking of flyin animation of child element(s)
+  backface-visibility: hidden;
+}
+```

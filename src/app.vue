@@ -6,8 +6,8 @@
   <about-page></about-page>
   <features-page></features-page>
   <tours-page></tours-page>
-
   <stories-page></stories-page>
+  <booking-page></booking-page>
 </main>
   
 </template>
@@ -19,6 +19,7 @@ import aboutPage from './about/aboutPage.vue';
 import featuresPage from './features/featPage.vue';
 import toursPage from './tours/toursPage.vue';
 import storiesPage from './stories/storiesPage.vue';
+import bookingPage from './booking/bookingPage.vue';
 
 export default {
   components:{
@@ -27,7 +28,8 @@ export default {
     'about-page': aboutPage,
     'features-page': featuresPage,
     'tours-page': toursPage,
-    'stories-page': storiesPage
+    'stories-page': storiesPage,
+    'booking-page': bookingPage
   }
 }
 </script>

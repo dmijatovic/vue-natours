@@ -1,0 +1,18 @@
+
+@import '../css/variables';
+
+.booking{
+  //achieving angled cut between gradient color 
+  //and showing clear background image
+  background-image: linear-gradient(105deg,
+    rgba($light-color, 0.9) 0%,
+    rgba($light-color, 0.9) 50%,
+    transparent 50%
+    ), url('../../assets/img/nat-10.jpg');
+
+  //one can use 100% instead of cover
+  background-size: cover;
+  border-radius: $border-radius-md;
+  box-shadow: $box-shadow-md;
+  height: 50rem;
+}

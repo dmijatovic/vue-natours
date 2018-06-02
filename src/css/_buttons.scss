@@ -69,8 +69,8 @@
 }
 
 .btn-primary{
-  background-color: $primary-color;
-  color: $primary-color-contrast;  
+  background-color: $color-1st;
+  color: $color-1st-contrast;  
 }
 
 .btn.btn-accent{
@@ -97,6 +97,6 @@
 }
 
 .btn-md{
-  padding: $rem-lg;
-  font-size: $rem-md;
+  padding: $rem-xl;
+  font-size: $rem-xl;
 }

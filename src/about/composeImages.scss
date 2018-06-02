@@ -14,7 +14,7 @@
     outline-offset: $rem-sm;
 
     &:hover{
-      outline: $rem-sm solid $primary-color;
+      outline: $rem-sm solid $color-1st;
       transform: scale(1.1);
       box-shadow: 0 2rem 4rem rgba($dark-color,.5);
       z-index: 7;

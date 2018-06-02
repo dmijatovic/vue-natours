@@ -1,0 +1,32 @@
+@import '../css/variables';
+@import '../css/animations';
+
+.feature{
+  background-color: rgba($light-color,.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 2px;
+  box-shadow: 0 1.5rem 4rem rgba($dark-color, 0.20);
+  
+  //jump on hover
+  transition: transform .2s;
+  &:hover{
+    transform: translateY(-1rem) scale(1.05);
+  }
+  
+  &-icon{
+    font-size: 6rem;
+  }
+
+  &-head{
+    margin-top: $rem-sm;
+  }
+
+  &-body{
+    margin-top: $rem-sm;
+  }
+
+
+
+}

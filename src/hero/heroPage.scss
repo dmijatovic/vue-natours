@@ -14,6 +14,8 @@
     $gradient-end), 
     url('../../assets/img/hero.jpg');
   background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
   //clip-path to create image cut effect
   //polygoon (x-left-top y-left-top, x-right-top y-right-top, x-bottom-right y-bottom-right)
   clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);

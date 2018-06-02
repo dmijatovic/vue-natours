@@ -39,7 +39,7 @@ export default {
 @import '../css/variables';
 
 .grid-test{
-  border: 1px solid $primary-color;
+  border: 1px solid $color-1st;
   padding: $rem-xl 0;
 }
 

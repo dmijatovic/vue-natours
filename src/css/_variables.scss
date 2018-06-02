@@ -7,14 +7,26 @@ $dark-color: #333;
 $light-color-contrast: $dark-color;
 $dark-color-contrast: $light-color;
 
-$primary-color: #7ed56f;
-$primary-color-contrast: $dark-color;
-$secondary-color: #55c57a;
-$secondary-color-contrast: $dark-color;
+$color-1st: #55c57a;
+$color-1st-light: lighten($color-1st, 25%);
+$color-1st-dark: darken($color-1st, 25%);
+$color-1st-contrast: $dark-color;
+
+$color-2nd: #ffb900;
+$color-2nd-light: lighten($color-2nd,25%);  
+$color-2nd-dark: darken($color-2nd, 25%);
+$color-2nd-contrast: $dark-color;
+
+
+$color-3rd: #1e1eda;
+$color-3rd-light: lighten($color-3rd,25%);  
+$color-3rd-dark: darken($color-3rd, 25%);
+$color-3rd-contrast: $dark-color;
+
 $accent-color: #28b485;
 $accent-color-contrast: $light-color;
 
-$warn-color: darkred;
+$warn-color: #810e0e;
 $warn-color-contrast: $light-color;
 
 //settin hext in rgba variable is possible
@@ -42,6 +54,8 @@ $font-family: 'Lato', sans-serif;
 $font-size-sm: $rem-md;
 $font-size-md: $rem-xl;
 $font-size-lg: $rem-2x;
+$font-size-xl: $rem-3x;
+
 
 $font-weight-xs: 100;
 $font-weight-sm: 300;
@@ -62,10 +76,14 @@ $line-height-2x: 2;
 $box-shadow-color: rgba(0,0,0,.2);
 $box-shadow-xs: 0 0.1rem 0.5rem $box-shadow-color;
 $box-shadow-sm: 0 0.2rem 1rem $box-shadow-color;
+$box-shadow-md: 0 1rem 4rem $box-shadow-color;
+$box-shadow-lg: 0 2rem 8rem $box-shadow-color;
+
+
 
 //GRID size
 //max width set to 1600px (default)
 $grid-width: 90rem;
 $gutter: $rem-2x;
-$gutter-horizontal: $rem-2x;
+$gutter-horizontal: $rem-5x;
 $gutter-vertical: $rem-2x;

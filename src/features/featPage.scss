@@ -1,0 +1,28 @@
+@import '../css/variables';
+@import '../css/animations';
+
+.features{
+  //pull top up
+  //margin-top: -7rem;
+  padding: 20rem 0;
+  //multiple images at background - lastone is at the top
+  //gradient uses opacity
+  background-image: linear-gradient(
+    to right bottom, 
+    $gradient-start, 
+    $gradient-end), 
+    url('../../assets/img/nat-4.jpg');
+  background-position: top;
+  background-size: cover;
+  //clip-path to create image cut effect
+  //polygoon (x-left-top y-left-top, x-right-top y-right-top, x-bottom-right y-bottom-right)
+  //clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+ 
+  //SKEW
+  //we skew 'section' and  
+  transform: skewY(-7deg);
+  //select only direct child > of this parent
+  & > * {
+    transform: skewY(7deg);  
+  }
+}

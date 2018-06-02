@@ -2,9 +2,8 @@
 @import '../css/variables';
 
 .about{
-  background-color: lighten($grey-color, 45%);
-  padding: $rem-20 0;
-
+  //background-color: lighten($grey-color, 45%);
+  padding: $rem-10 0 $rem-20 0;
   //move it higher to close the gap
-  margin-top: -20vh;
+  //margin-top: -20vh;
 }

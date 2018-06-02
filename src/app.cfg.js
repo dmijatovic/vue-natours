@@ -131,6 +131,36 @@
         body:'$999'
       }     
     }]
+  },
+  storiesPage:{
+    title:'All these nice stories!!!',
+    bgVideo:[
+      { src:'img/video.mp4', type:'video/mp4' },
+      { src:'img/video.webm', type:'video/webm'}
+    ],
+    stories:[{
+      img:'img/nat-3.jpg',
+      user: 'First & Last name',
+      title:'I just love this stuff :-)',
+      body:`
+        Here comes the body of this nice story I just imagined.
+        Here comes the body of this nice story I just imagined.
+        Here comes the body of this nice story I just imagined.
+        Here comes the body of this nice story I just imagined.
+        Here comes the body of this nice story I just imagined.
+      `
+    },{
+      img:'img/nat-4.jpg',
+      user: 'Dusan Mijatovic',
+      title:'This is not normal!',
+      body:`
+        Here comes the body of this nice story I just imagined.
+        Here comes the body of this nice story I just imagined.
+        Here comes the body of this nice story I just imagined.
+        Here comes the body of this nice story I just imagined.
+        Here comes the body of this nice story I just imagined.
+      `
+    }]
   }
   
 };

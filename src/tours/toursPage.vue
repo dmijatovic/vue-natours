@@ -1,8 +1,9 @@
 <template>
   <section class="tours">
-    <div class="u-center u-mb-xl">
-      <h1 class="t-heading-2">{{title}}</h1>
-    </div>
+    <page-title
+      :pageTitle="title">
+    </page-title>
+    
     <div class="row">
       <div class="col-1-of-3"
         v-for="(card, i) in cards"

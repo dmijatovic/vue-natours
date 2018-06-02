@@ -18,6 +18,12 @@ const router = new VueRouter({
 });
 */
 
+// SYSTEM COMPONENTS
+import pageTitle from './system/pageTitle.vue';
+//page title
+Vue.component('page-title',pageTitle);
+
+
 //create app
 const app = new Vue({
   //add to this element

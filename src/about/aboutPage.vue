@@ -1,11 +1,9 @@
 <template>
   
 <main class="about">
-  <div class="u-center u-mb-xl">
-    <h2 class="t-heading-2">
-      {{aboutTitle}}
-    </h2>
-  </div>
+  <page-title
+    :pageTitle="aboutTitle">
+  </page-title>
   <div class="row">
     <div class="col-1-of-2">
       <template v-for="(article, i) in articles">

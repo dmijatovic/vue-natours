@@ -39,6 +39,8 @@ In this section I will note specific items from the course I find useful.
 
 - display "inline-block" is used when you need padding on inline element.
 
+- filters: for image manipulation like blur(), brigthness() etc.
+
 - SCSS 'operators'
 
 ``` scss
@@ -83,9 +85,6 @@ body{
   
 
 ```
-
-
-
 
 ### Animations
 

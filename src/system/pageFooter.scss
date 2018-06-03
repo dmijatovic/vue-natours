@@ -1,0 +1,22 @@
+@import '../css/variables';
+
+.footer{
+  padding: 5rem 0 7rem 0;
+  background-color: $dark-color;
+  font-size: $font-size-md;
+
+  &-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-footer-nav{
+    padding: 1rem;
+  }
+  &-copyright{
+    float:right;
+    padding:1rem;
+  }
+
+}

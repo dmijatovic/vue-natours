@@ -20,9 +20,12 @@ const router = new VueRouter({
 
 // SYSTEM COMPONENTS
 import pageTitle from './system/pageTitle.vue';
+import mainNav from './system/mainNav.vue';
+import pageFooter from './system/pageFooter.vue';
 //page title
 Vue.component('page-title',pageTitle);
-
+Vue.component('page-footer', pageFooter);
+Vue.component('main-nav',mainNav);
 
 //create app
 const app = new Vue({

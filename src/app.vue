@@ -1,6 +1,8 @@
 <template>
 <main class="app-page">  
-  
+  <main-nav
+    :menuItems="menuItems">
+  </main-nav>
   <hero-page></hero-page>
   <!--<grid-test></grid-test>-->
   <about-page></about-page>
@@ -8,6 +10,12 @@
   <tours-page></tours-page>
   <stories-page></stories-page>
   <booking-page></booking-page>
+  
+  <page-footer
+    :logo="footer.logo"
+    :links="footer.links"
+    :copyright="footer.copyright">
+  </page-footer>
 </main>
   
 </template>
@@ -21,6 +29,8 @@ import toursPage from './tours/toursPage.vue';
 import storiesPage from './stories/storiesPage.vue';
 import bookingPage from './booking/bookingPage.vue';
 
+import { cfg } from './app.cfg';
+
 export default {
   components:{
     'hero-page': heroPage,
@@ -30,6 +40,16 @@ export default {
     'tours-page': toursPage,
     'stories-page': storiesPage,
     'booking-page': bookingPage
+  },
+  data(){
+    return {
+      menuItems: cfg.menuItems,
+      footer:{
+        logo: cfg.hero.logo.img,
+        links: cfg.footer.links,
+        copyright: cfg.footer.copyright
+      }
+    }
   }
 }
 </script>

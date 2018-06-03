@@ -4,8 +4,13 @@
  * this is initial idea
  */
  export const cfg={
-  //appTitle:'Outdoors',
-  //appSubtitle: 'The space wehere we can hide',   
+  menuItems:[{
+    link:'#1', label:"Menu item 1", faIco:"fas fa-home"
+  },{
+    link:'#2', label:"Menu item 2", faIco:"fas fa-home"
+  },{
+    link:'#3', label:"Menu item 3", faIco:"fas fa-home"
+  }],
   //HERO section
   hero:{
     title:'Outdoor',
@@ -161,6 +166,15 @@
         Here comes the body of this nice story I just imagined.
       `
     }]
+  },
+  footer:{
+    links:[{
+      url: '#1',
+      label:"This is link 1"
+    }],
+    copyright:`
+      This is copyright text here!
+    `
   }
   
 };

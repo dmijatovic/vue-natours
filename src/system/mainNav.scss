@@ -1,0 +1,75 @@
+
+@import '../css/variables';
+
+.navigation{
+  &-button{
+    position:fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 6rem; right:6rem;
+    width: 7rem; height: 7rem;
+    border-radius: 50%;
+    background-color: $light-color;
+    box-shadow: $box-shadow-md;
+    z-index: 9;
+    cursor: pointer;
+  }
+
+  //background behind button
+  &-background{
+    position: fixed;
+    top: 6.5rem; right: 6.5rem;
+    width: 6rem; height:6rem;
+    border-radius:50%;
+    background-image: radial-gradient($color-1st-light,$color-1st-dark);
+    z-index: 7;
+    transition: all 0.5s;
+  }
+
+  //animate menu background
+  &-background.active{
+    transform: scale(80);
+    overflow: hidden;
+  }
+
+  //menu hidden initially
+  &-menu{
+    display: none;
+    //visibility: hidden;
+    opacity: 0;
+    transition: all 2s;
+  }
+
+  //show menu on active
+  &-menu.active{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left:0; top:0;
+    height: 100vh;
+    width: 100%;
+    opacity: 1;
+    z-index: 8;
+  }
+
+  &-list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-item{
+    display: inline-block;
+    padding: $rem-lg $rem-2x;
+    font-size: $font-size-xl;
+    font-weight: $font-weight-sm;
+
+
+    a{
+      text-decoration: none;
+    }
+  }
+
+}

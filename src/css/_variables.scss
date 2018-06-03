@@ -26,7 +26,7 @@ $color-3rd-contrast: $dark-color;
 $accent-color: #28b485;
 $accent-color-contrast: $light-color;
 
-$warn-color: #810e0e;
+$warn-color: darken($color-2nd, 10%);
 $warn-color-contrast: $light-color;
 
 //settin hext in rgba variable is possible

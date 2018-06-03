@@ -82,8 +82,21 @@ body{
 [class^="col-"]{
   background-color: red;
 }
-  
+```
 
+### Sibling selectors, ( + and ~ )
+
+```scss
+  //NOTE element order is important! in this example img comes BEFORE span in the html
+  //select span that comes immediatelly after image at the same 'height' (sibling elements)
+  img + span {
+    //do something here to span
+  }
+
+  //select first (sibling) span element that comes AFTER img element
+  img ~ span{
+    //do something here
+  }
 ```
 
 ### Animations

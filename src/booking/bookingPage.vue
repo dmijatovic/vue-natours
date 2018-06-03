@@ -1,18 +1,57 @@
 <template>
-  <section class="booking-page">
-    <h1>It works</h1>
+  <section class="booking-page">    
     <div class="row">
-      <booking-form></booking-form>
+      <booking-form
+        :title="form.title"
+        :items="form.items"
+        :submit="form.submit"
+        @onSubmit="submit($event)">
+      </booking-form>
     </div>    
   </section>
 </template>
 
 <script>
 import bookingForm from './bookingForm.vue';
-
 export default {
   components:{
     'booking-form': bookingForm
+  },
+  data(){
+    return {
+      form:{
+        title:'Book right now!',
+        submit:{
+          label:'Book now!',
+          eventId:'onSubmit'
+        },
+        items:[{
+          id:"name",
+          type: "text",
+          label: 'Your name',
+          value: null,
+          required: true 
+        },{
+          id:"email",
+          type: "email",
+          label: 'Your email',
+          value: null,
+          required: true 
+        },{
+          id:"tour_type",
+          type: "radio",
+          label: 'Your age',
+          required: false,
+          value:'option 1',
+          options:['option 1', 'option 2']
+        }]
+      }
+    }    
+  },
+  methods:{
+    submit(e){
+      console.log("Form submitted...", this.form.items);
+    }
   }
 }
 </script>

@@ -4,6 +4,7 @@
 /*
   only when a used 
 */
+.btn,
 .btn:link,
 .btn:visited{
   position: relative;
@@ -16,6 +17,9 @@
   //transition needs to be present here (inital state)
   transition: all .2s;
   z-index: 1;
+
+  //button styling
+  border: none;
 }
 
 //on hover rise button up
@@ -25,7 +29,8 @@
 }
 
 //on click lower down (from inital position)
-.btn:active{
+.btn:active,
+.btn:focus{
   transform: translateY(0.05em);
   box-shadow: $box-shadow-xs;
 }
@@ -92,11 +97,16 @@
 }
 
 .btn-lg{
-  padding: $rem-2x;
-  font-size: $rem-lg;
+  padding: $rem-lg $rem-4x;
+  font-size: $rem-2x;
 }
 
 .btn-md{
-  padding: $rem-xl;
+  padding: $rem-lg $rem-2x;
   font-size: $rem-xl;
+}
+
+.btn-sm{
+  padding: $rem-md $rem-xl;
+  font-size: $rem-lg;
 }

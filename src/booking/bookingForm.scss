@@ -16,3 +16,115 @@
   box-shadow: $box-shadow-md;
   height: 50rem;
 }
+
+.form{
+
+  padding: $rem-2x;
+
+  &-group{
+    width: 40%;
+  }  
+  //add margin between item except for last-child
+  &-group:not(:last-child){
+    margin-bottom: $rem-2x;
+  }
+
+  &-input{
+    display: block;
+    width: 100%;
+    //inputs do not inherit font props automatically (as other elements)
+    font-family: inherit;
+    font-size: $font-size-md;
+    color: inherit;
+    padding: $rem-xl $rem-2x;
+    border-radius: $border-radius-xs;
+    //see trough effect
+    background-color: rgba($light-color,0.8);
+    border: none;
+    //invisible border to avoid 'moving'
+    border-bottom: 3px solid transparent;
+
+    //add animation
+    transition: all 0.3s;
+
+    //set border-bottom on focus
+    &:focus{
+      outline: none;
+      box-shadow: $box-shadow-md;
+      border-bottom: 3px solid $color-1st;
+    }
+
+    //set border botton on invalid
+    &:focus:invalid{
+      border-bottom: 3px solid $warn-color;
+    }
+
+    //select placeholder pseudo element
+    &::input-placeholder{
+      color: $grey-color;
+    }
+  }
+
+  &-label{
+    display: block;
+    padding: $rem-md $rem-2x;
+    //always on the 'plain' element
+    transition: all 0.5s;
+    transform: translateY(-8rem);
+  }
+
+  //select label that comes directly after input element
+  //ONLY when placeholder is shown
+  //note! the order of elements in html matters.
+  &-input:placeholder-shown + &-label{
+    //because we cannot animate visibility
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-5rem);
+  }
+
+
+  //CUSTOM RADIO BUTTON
+  &-radio-label{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &-radio{
+    position: relative;
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: $rem-xs solid $color-1st-dark;
+    border-radius: 50%;
+    margin-right: $rem-lg;
+
+    &::after{
+      //needs always content
+      content:'';
+      display: inline-block;
+      width: 1.5rem;
+      height: 1.5rem;
+      position: absolute;
+      top:50%; left:50%;
+      border-radius: 50%;
+      background-color: $color-1st-dark;
+      transform: translate(-50%,-50%);  
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+  }
+
+  //sync radio input checked status with our custom radio button
+  //selector: from radio input, select sybelling radio label and 
+  //then pseudo child element form-radio::after
+  &-radio-input:checked ~ &-radio-label &-radio::after{
+    opacity: 1;
+  }
+
+  &-radio-input{
+    visibility: hidden;
+  }
+
+}

@@ -2,20 +2,7 @@
 @import '../css/variables';
 
 .navigation{
-  &-button{
-    position:fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    top: 6rem; right:6rem;
-    width: 7rem; height: 7rem;
-    border-radius: 50%;
-    background-color: $light-color;
-    box-shadow: $box-shadow-md;
-    z-index: 9;
-    cursor: pointer;
-  }
-
+  
   //background behind button
   &-background{
     position: fixed;
@@ -90,4 +77,70 @@
       background-position-x: 0;
     }
   }
+
+  &-button{
+    position:fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 6rem; right:6rem;
+    width: 7rem; height: 7rem;
+    border-radius: 50%;
+    background-color: $light-color;
+    box-shadow: $box-shadow-md;
+    z-index: 9;
+    cursor: pointer;
+  }
+
+//----------------------------------------
+// NAVIGATION ICON
+
+  &-icon{
+    //three elements
+    &,
+    &::before,
+    &::after{
+      position:absolute;
+      width: 3rem;
+      //height is constant
+      height: 2px;
+      background-color: $dark-color;
+      transition: all 0.3s;
+    }
+    
+    &::before,
+    &::after{
+      //pseudo elemets need content to appear
+      content: "";
+      //height: 2px;
+    }
+
+    &::before{
+      top:-0.9rem;
+      left:0;
+    }
+    &::after{
+      top:0.9rem;
+      left:0;
+    }
+  }
+
+  /* we do it simpler with vue
+  //when background active maken middle 
+  //icon bar transparent
+  &-background.active ~ &-button &-icon{
+    background-color: transparent;
+  }*/
+  &-icon.active{
+    background-color: transparent;
+  }
+  &-icon.active::before{
+    transform: rotate(135deg);
+    top:0;
+  }
+  &-icon.active::after{
+    transform: rotate(-135deg);
+    top:0;
+  }
+
 }

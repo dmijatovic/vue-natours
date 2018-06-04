@@ -7,15 +7,16 @@
       <div class="col-1-of-2">
         <ul class="footer-nav">
           <li v-for="link in links"
-            class="footer-link"
+            class="footer-item"
             :key="link.label">
-              <a :href="link.url">{{ link.label }}</a>
+              <a class="footer-link"
+                :href="link.url">{{ link.label }}</a>
             </li>
         </ul>
       </div>
       <div class="col-1-of-2">
-        <div class="footer-copyright">
-          {{copyright}}
+        <div class="footer-copyright"
+          v-html="copyright">
         </div>
       </div>
     </div>

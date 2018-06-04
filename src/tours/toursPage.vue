@@ -1,5 +1,5 @@
 <template>
-  <section class="tours">
+  <section class="tours" id="section-tours">
     <page-title
       :pageTitle="title">
     </page-title>

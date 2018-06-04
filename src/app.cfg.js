@@ -17,7 +17,7 @@
     subtitle:'The place full of joy',
     cta:{      
       label:'Click here for the magic',
-      link:'#'
+      link:'#section-tours'
     },
     logo:{
       img:'img/logo-white.png'
@@ -167,13 +167,49 @@
       `
     }]
   },
+  subscribeForm:{
+    title:'Subscribe for our newsletter!',
+    submit:{
+      label:'Subscribe now!',
+      eventId:'onSubmit'
+    },
+    items:[{
+      id:"name",
+      type: "text",
+      label: 'Your name',
+      value: null,
+      required: true 
+    },{
+      id:"email",
+      type: "email",
+      label: 'Your email',
+      value: null,
+      required: true 
+    },{
+      id:"tour_type",
+      type: "radio",
+      label: 'Your age',
+      required: false,
+      value:'Weekly news',
+      options:['Weekly news', 'Monthly news']
+    }]
+  },
   footer:{
     links:[{
       url: '#1',
       label:"This is link 1"
+    },{
+      url: '#2',
+      label:"link 2"
+    },{
+      url: '#3',
+      label:"link 3"
+    },{
+      url: '#4',
+      label:"And link 4"
     }],
     copyright:`
-      This is copyright text here!
+      Copyright &copy; by Jonas Schmedtmann. You are 100% allowed to use this webpage for personal and commercial use, but NOT to claim it as your own design.
     `
   }
   

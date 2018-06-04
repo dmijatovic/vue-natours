@@ -29,7 +29,9 @@
         </p>
       </div>
       <div class="card-cta">
-        <a :href="card.back.btn.link"
+        <!--:href="card.back.btn.link"-->
+        <a href.prevent=""
+          @click="showPopup"
           class="btn btn-md btn-white">
           <i v-if="card.back.btn.faIco"
             :class="card.back.btn.faIco">
@@ -44,6 +46,10 @@
 </template>
 
 <script>
+
+//import popupImg from '../system/popupImg.vue';
+import { eventSvc } from '../system/eventSvc';
+
 export default {
   props:{
     id: Number,
@@ -59,6 +65,14 @@ export default {
     backClass(){
       //debugger
       return `card-back-${this.id}`;
+    }
+  },
+  methods:{
+    showPopup(){
+      console.log("Emit show popup");
+      eventSvc.$emit('showPopup',{
+        data: "this is data"
+      })
     }
   }
 }

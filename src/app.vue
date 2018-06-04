@@ -16,6 +16,8 @@
     :links="footer.links"
     :copyright="footer.copyright">
   </page-footer>
+
+  <popup-img></popup-img>
 </main>
   
 </template>

@@ -6,7 +6,10 @@
     <!--nav button --> 
     <div class="btn navigation-button"
       @click="toggleMenu">
-      Menu
+      <span class="navigation-icon"
+        :class="{active:showMenu}">
+        &nbsp;
+      </span>
     </div>
     <!-- nav menu -->
     <div class="navigation-menu"

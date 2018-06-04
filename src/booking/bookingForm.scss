@@ -29,6 +29,10 @@
     margin-bottom: $rem-2x;
   }
 
+  &-group-radio{
+    margin: 0 2rem 2rem 0;
+  }
+
   &-input{
     display: block;
     width: 100%;
@@ -68,6 +72,7 @@
   &-label{
     display: block;
     padding: $rem-md $rem-2x;
+    font-size: $font-size-md;
     //always on the 'plain' element
     transition: all 0.5s;
     transform: translateY(-8rem);

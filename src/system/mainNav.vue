@@ -16,7 +16,8 @@
           v-for="item in menuItems"
           :key="item.label">
           
-          <a :href="item.link">
+          <a :href="item.link"
+            class="btn navigation-link">
             <i :class="item.faIco"></i>
             <span class="navigation-label">
               {{item.label}}

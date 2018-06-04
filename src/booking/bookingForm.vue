@@ -7,6 +7,7 @@
       <!-- per input item -->
       <div v-for="item in items"
           class="form-group"
+          :class="{'u-flex-row':item.type=='radio'}"
           :key="item.id">  
         
         <template v-if="item.type=='radio'">
@@ -19,6 +20,7 @@
               :type="item.type"                         
               :required="item.required"              
               v-model="item.value"
+              :value = "option"
               class="form-radio-input" />
             <label
               :for="option"

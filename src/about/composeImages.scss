@@ -4,7 +4,7 @@
 .composition{
   position: relative;
   &-photo{
-    width:40%;
+    width:50%;
     box-shadow: 0 1.5rem 4rem rgba($dark-color,.4);
     border-radius: 2px;
     position: absolute;
@@ -23,22 +23,22 @@
 
   .link-0{
     img{
-      top: -2rem;
-      left: 10rem;
+      top: 0rem;
+      left: 12rem;
     }
   }
 
   .link-1{
     img{
-      top: 2rem;
+      top: 7rem;
       left: 5rem;
     }
   }
 
   .link-2{
     img{
-      top: 4rem;
-      right: 2rem;
+      top: 12rem;
+      right: 7rem;
     }
   }
 }

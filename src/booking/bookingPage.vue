@@ -20,9 +20,9 @@ export default {
   data(){
     return {
       form:{
-        title:'Book right now!',
+        title:'Subscribe for our newsletter!',
         submit:{
-          label:'Book now!',
+          label:'Subscribe now!',
           eventId:'onSubmit'
         },
         items:[{
@@ -42,8 +42,8 @@ export default {
           type: "radio",
           label: 'Your age',
           required: false,
-          value:'option 1',
-          options:['option 1', 'option 2']
+          value:'Weekly news',
+          options:['Weekly news', 'Monthly news']
         }]
       }
     }    

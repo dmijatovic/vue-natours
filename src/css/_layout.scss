@@ -1,5 +1,6 @@
 
 @import 'variables';
+@import 'media';
 
 *,
 *::before,
@@ -28,6 +29,32 @@ html{
   see _variables for defined rem size variables
   */
   font-size: 100%;
+
+  //ORDER MATTERS!
+  //sizes xs, sm, md use min-width and xl uses max-width
+  //the order needs to be reversed to md, sm, xs, xl
+  //note! the order determines which style will win at the end
+
+
+  @include responsive(md){
+    //estimated 12px
+    font-size: 70%;
+  }
+
+  @include responsive(sm){
+    //estimated 10px=1rem
+    font-size: 60%;
+  }
+
+  @include responsive(xs){
+    //estimates 8px=1rem
+    font-size: 50%;
+  }
+
+  @include responsive(xl){
+    //estimated 16px=1rem
+    font-size: 110%;
+  }
 }
 
 body{
@@ -35,4 +62,21 @@ body{
   color: $grey-color;
   padding: $rem-lg;
   box-sizing: border-box;  
+
+  //ORDER MATTERS!
+  //sizes xs, sm, md use min-width and xl uses max-width
+  //the order need to be reversed to md, sm, xs, xl when applying
+  //beacuse the order determines which style will win at the end
+  //IMPORTANT! the order enables you then to apply one style for
+  //multiple sizes, for example: if you want specific style for 
+  //md, sm and xs then you just can use md and other will fall 
+  //in the same category
+
+  @include responsive(sm){
+    padding: 0;
+  }
+
+  @include responsive(xs){
+    min-width:500px;
+  }
 }

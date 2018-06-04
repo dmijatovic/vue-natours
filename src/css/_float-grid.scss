@@ -4,7 +4,7 @@
 */
 
 @import 'variables';
-
+@import 'media';
 //------------------------------------------------
 //MIXINS
 //------------------------------------------------
@@ -26,6 +26,12 @@
 .row{
   //max width set to 1600px (default)
   max-width: $grid-width;
+
+  @include responsive(sm){
+    max-width: $grid-width-sm;
+    padding: 0 3rem;
+  }
+
   //background-color: $light-color;
   //center vertically
   margin: 0 auto; 
@@ -56,6 +62,14 @@
     &:not(:last-child){
       margin-right: $gutter-horizontal;
     }
+
+    //CONVERT TO COLUMNS from table portait
+    @include responsive (sm){
+      width: 100% !important;
+      margin-right: 0;
+      margin-bottom: $gutter-horizontal; 
+    }
+
   }
   
   .col-1-of-2{

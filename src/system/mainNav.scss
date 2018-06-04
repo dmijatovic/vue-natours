@@ -1,5 +1,6 @@
 
 @import '../css/variables';
+@import '../css/media';
 
 .navigation{
   
@@ -12,7 +13,14 @@
     background-image: radial-gradient($color-1st-light,$color-1st-dark);
     z-index: 7;
     transition: all 0.5s;
+
+    //small devices position
+    @include responsive(sm){
+      top: 3.5rem; right: 3.5rem;
+    }
   }
+
+  
 
   //animate menu background
   &-background.active{
@@ -90,6 +98,11 @@
     box-shadow: $box-shadow-md;
     z-index: 9;
     cursor: pointer;
+
+    //small devices position
+    @include responsive(sm){
+      top: 3rem; right: 3rem;
+    }
   }
 
 //----------------------------------------

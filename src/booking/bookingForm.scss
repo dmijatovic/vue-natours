@@ -1,5 +1,6 @@
 
 @import '../css/variables';
+@import '../css/media';
 
 .booking{
   //achieving angled cut between gradient color 
@@ -14,15 +15,31 @@
   background-size: cover;
   border-radius: $border-radius-md;
   box-shadow: $box-shadow-md;
-  height: 50rem;
+  
+  @include responsive(sm){
+    background-image: linear-gradient(105deg,
+    rgba($light-color, 0.9) 0%,
+    rgba($light-color, 0.9) 100%
+    ), url('../../assets/img/nat-10.jpg');
+  }
 }
 
 .form{
 
   padding: $rem-2x;
 
+  @include responsive(sm){
+    text-align: center;
+    padding: 4rem 2rem;
+
+  }
+
   &-group{
     width: 40%;
+    @include responsive(sm){
+      width: 100%;
+      padding: 0 2rem;
+    }
   }  
   //add margin between item except for last-child
   &-group:not(:last-child){

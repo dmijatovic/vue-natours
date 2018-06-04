@@ -2,7 +2,7 @@
   <header class="hero">    
 
     <div class="hero-logo-box">
-      <img :src="logo" class="hero-logo" alt="Logo" />
+      <img :srcset="logo" class="hero-logo" alt="Logo" />
     </div>
     <div class="hero-content">
       <!-- h1 important for SEO include website title-->

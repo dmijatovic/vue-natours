@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="footer-logo">
-      <img :src="logo" alt="Logo">
+      <img :srcset="logo" alt="Logo">
     </div>
     <div class="row">
       <div class="col-1-of-2">

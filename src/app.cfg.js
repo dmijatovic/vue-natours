@@ -20,7 +20,7 @@
       link:'#section-tours'
     },
     logo:{
-      img:'img/logo-white.png'
+      img:'img/logo-green-1x.png 1x, img/logo-green-2x.png 2x'
     } 
   },
   about:{

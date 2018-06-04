@@ -107,3 +107,31 @@ body{
   backface-visibility: hidden;
 }
 ```
+
+### Responsive images
+
+- resolution switching: large vs small screen
+- density switching: 2x screen (hi-res mobile devices) vs 1x screen (traditional desktop). 
+- art direction: different image on different devices (portrait vs. landscape)
+
+Different approach for html (img tags) and scss styles. In html use srcset instead of src.
+
+```html
+  <!-- 
+    density swithing in html 
+    use srcset instead src html tag
+  -->
+  <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" />
+
+  <!-- ard direction 
+    define different images for one image based on media query
+  -->
+
+  <picture class="logo">
+    <!-- for small screens -->
+    <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" 
+            media="(max-width: 37.5em)" />
+    <!-- other screen sizes -->
+    <img  srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="image" />
+  </picture>
+```

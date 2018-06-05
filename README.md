@@ -18,12 +18,7 @@ After cloning project, run `npm install` to install all dependencies. Then use f
 
 The difference between `original` SCSS training and this repo is that all `parts` are Vuejs components. In addition, webpack is used for developement (webpack-dev-server) and deployment (production build).
 
-The following vue components are created for this website demo.
-
-- heroPage: component to cover hero section of single 'smooth' scroll website (we are making here)
-- 
-
-## Things to remember
+## Lessons learned
 
 In this section I will note specific items from the course I find useful.
 

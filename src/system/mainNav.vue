@@ -46,7 +46,7 @@ export default {
   methods:{
     toggleMenu(){
       this.showMenu = !this.showMenu;
-      console.log("toggleMenu...", this.showMenu);
+      //console.log("toggleMenu...", this.showMenu);
     }
   }
 }

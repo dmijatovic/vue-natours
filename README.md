@@ -155,7 +155,7 @@ Using media queries in SCSS
   // OR safari has different version for pixel ratio
   // OR screen size > 2000px (4K in em)
   @media (min-resolution: 192dpi) and (min-width: 37.5em),
-    (-webkit-min-device-pixel-ratio) and (min-width: 37.5em),
+    (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
     (min-width:125em){
     background-image: url('img/hero-large.jpg');
   } 

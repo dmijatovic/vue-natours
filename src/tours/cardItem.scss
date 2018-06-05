@@ -105,11 +105,22 @@ $card-height: 40rem;
     font-size: $font-size-lg;
     font-weight: $font-weight-md;
     text-align: right;
-    color: $light-color;
-    background-color: rgba($color-2nd-dark,.8);
+    color: $light-color;    
     padding: $rem-sm;
     border-radius: 3px;
     //box-decoration-break: clone;
+  }
+
+  &-image.img-0 ~ &-heading{
+    background-color: rgba($color-2nd-dark,.8);
+  }
+
+  &-image.img-1 ~ &-heading{
+    background-color: rgba($color-1st-dark,.8);
+  }
+
+  &-image.img-2 ~ &-heading{
+    background-color: rgba($color-3rd-dark,.8);
   }
 
   &-body{

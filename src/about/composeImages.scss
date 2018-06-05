@@ -45,7 +45,7 @@
   .link-1{
     img{
       top: 7rem;
-      left: 5rem;
+      left: 2rem;
 
       //MOBILE styles
       @include responsive(sm){
@@ -60,7 +60,7 @@
   .link-2{
     img{
       top: 12rem;
-      right: 7rem;
+      right: 2rem;
 
       //MOBILE styles
       @include responsive(sm){

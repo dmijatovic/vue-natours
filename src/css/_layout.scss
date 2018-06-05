@@ -28,7 +28,8 @@ html{
   if we assume 16px as starting point, we scale in steps of 0.25 rem (4px).
   see _variables for defined rem size variables
   */
-  font-size: 100%;
+  //estimated 14px=1rem;
+  font-size: 87.5%;
 
   //ORDER MATTERS!
   //sizes xs, sm, md use min-width and xl uses max-width
@@ -38,12 +39,12 @@ html{
 
   @include responsive(md){
     //estimated 12px
-    font-size: 70%;
+    font-size: 75%;
   }
 
   @include responsive(sm){
     //estimated 10px=1rem
-    font-size: 60%;
+    font-size: 62.5%;
   }
 
   @include responsive(xs){
@@ -53,7 +54,7 @@ html{
 
   @include responsive(xl){
     //estimated 16px=1rem
-    font-size: 110%;
+    font-size: 100%;
   }
 }
 

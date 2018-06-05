@@ -25,7 +25,11 @@
 
 .row{
   //max width set to 1600px (default)
-  max-width: $grid-width;
+  max-width: $grid-width-md;
+
+  @include responsive(xl){
+    max-width: $grid-width-lg;    
+  }
 
   @include responsive(sm){
     max-width: $grid-width-sm;

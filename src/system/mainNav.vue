@@ -4,7 +4,7 @@
     <div class="navigation-background"
       :class="{active:showMenu}">&nbsp;</div>
     <!--nav button --> 
-    <div class="btn navigation-button"
+    <div class="btn navigation-button u-no-select"
       @click="toggleMenu">
       <span class="navigation-icon"
         :class="{active:showMenu}">

@@ -3,7 +3,7 @@
     <div class="feature-icon">
       <i :class="feature.faIco" />
     </div>
-    <div class="feature-head t-heading-3">
+    <div class="feature-head t-heading-3 u-mb-md">
       {{feature.title}}
     </div>
     <div class="feature-body">

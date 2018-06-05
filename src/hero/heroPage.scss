@@ -71,6 +71,7 @@
   //this prevents flyin animation 
   //of child elements from shaking
   backface-visibility: hidden;
+  text-align: center;
 }
 
 .heading-primary-main{
@@ -93,9 +94,9 @@
 
 .heading-primary-sub{
   display: block;
-  font-size: $rem-md;
+  font-size: $rem-lg;
   font-weight: $font-weight-md;
-  letter-spacing: $rem-md * 1.2;
+  letter-spacing: $rem-lg;
   text-align: center;
 
   animation-name: flyInFromTop;

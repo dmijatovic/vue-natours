@@ -17,32 +17,32 @@
     subtitle:'The place full of joy',
     cta:{      
       label:'Click here for the magic',
-      link:'#section-tours'
+      link:'#'
     },
     logo:{
       img:'img/logo-white.png'
     } 
   },
   about:{
-    title:'This is my about title',
+    title:'It is all about CSS animations',
     articles:[{
       img:'img/nat-1-large.jpg',
-      link:'',
-      title:'This is article 1', 
+      link:'#',
+      title:'Title article 1', 
       body:`
       Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 
       `
     },{
       img:'img/nat-2-large.jpg',
-      link:'',
-      title:'This is article 2', 
+      link:'#',
+      title:'Title article 2', 
       body:`
       Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 
       `
     },{
       img:'img/nat-3-large.jpg',
-      link:'',
-      title:'This is article 3', 
+      link:'#',
+      title:'Title article 3', 
       body:`
       Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 
       `
@@ -52,35 +52,35 @@
   features:[{
     faIco: 'fas fa-american-sign-language-interpreting',
     link:'',
-    title: 'This is title 1',
+    title: 'Title of item 1',
     body:`
-    This is the body of this item
+    Lorem ipsum dolor sit amet, consectet-uer adipiscing elit. Aenean commodo ligula eget dolor.
     ` 
   },{
     faIco: 'fas fa-anchor',
     link:'',
-    title: 'This is title 2',
+    title: 'Title of item 2',
     body:`
-    This is the body of this item
+    Lorem ipsum dolor sit amet, consectet-uer adipiscing elit. Aenean commodo ligula eget dolor.
     ` 
   },{
     faIco: 'fab fa-vuejs',
     link:'',
-    title: 'This is title 3',
+    title: 'Title of item 3',
     body:`
-    This is the body of this item
+    Lorem ipsum dolor sit amet, consectet-uer adipiscing elit. Aenean commodo ligula eget dolor.
     ` 
   },{
     faIco: 'fab fa-angular',
     link:'',
-    title: 'This is title 4',
+    title: 'Title of item 4',
     body:`
-    This is the body of this item
-    ` 
+    Lorem ipsum dolor sit amet, consectet-uer adipiscing elit. Aenean commodo ligula eget dolor.
+    `
   }],
   //it supports 3 cards
   cardsPage:{
-    title:'Hover over me, please :-)',
+    title:'Amazing offerings!',
     cards:[{
       front:{
         title: 'Check the back side!',
@@ -138,37 +138,33 @@
     }]
   },
   storiesPage:{
-    title:'All these nice stories!!!',
+    title:'Unforgetable stories!!!',
     bgVideo:[
       { src:'img/video.mp4', type:'video/mp4' },
       { src:'img/video.webm', type:'video/webm'}
     ],
     stories:[{
       img:'img/nat-3.jpg',
-      user: 'First & Last name',
-      title:'I just love this stuff :-)',
+      user: 'Kevin van Bacon',
+      title:'It was amazing!',
       body:`
-        Here comes the body of this nice story I just imagined.
-        Here comes the body of this nice story I just imagined.
-        Here comes the body of this nice story I just imagined.
-        Here comes the body of this nice story I just imagined.
-        Here comes the body of this nice story I just imagined.
+      Lorem ipsum dolor sit amet, consectet-uer adipiscing elit. Aenean commodo ligula eget dolor.
+      Lorem ipsum dolor sit amet, consectet-uer adipiscing elit. Aenean commodo ligula eget dolor.
+      Lorem ipsum dolor sit amet, consectet-uer adipiscing elit. Aenean commodo ligula eget dolor.
       `
     },{
       img:'img/nat-4.jpg',
-      user: 'Dusan Mijatovic',
-      title:'This is not normal!',
+      user: 'George de Clouney',
+      title:'It was like a dream come true!',
       body:`
-        Here comes the body of this nice story I just imagined.
-        Here comes the body of this nice story I just imagined.
-        Here comes the body of this nice story I just imagined.
-        Here comes the body of this nice story I just imagined.
-        Here comes the body of this nice story I just imagined.
+      Lorem ipsum dolor sit amet, consectet-uer adipiscing elit. Aenean commodo ligula eget dolor.
+      Lorem ipsum dolor sit amet, consectet-uer adipiscing elit. Aenean commodo ligula eget dolor.
+      Lorem ipsum dolor sit amet, consectet-uer adipiscing elit. Aenean commodo ligula eget dolor.
       `
     }]
   },
   subscribeForm:{
-    title:'Subscribe for our newsletter!',
+    title:'Subscribe to our newsletter!',
     submit:{
       label:'Subscribe now!',
       eventId:'onSubmit'

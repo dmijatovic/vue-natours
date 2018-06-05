@@ -53,15 +53,17 @@ $breakpoint agument constant
   }
 
   @if $breakpoint == sm {
-    //calculated 600 - 900px/16
+    //calculated 600 - 1024 px/16
     //@media (min-width: 37.51em) and (max-width: 56.25em) { @content };
-    @media only screen and (max-width: 56.25em) { @content };
+    @media only screen and (max-width: 64em) { @content };
   }
 
   @if $breakpoint == md {
-    //calc 900 - 1200px/16
-    @media only screen and (max-width: 75em) { @content };
+    //calc 1024 - 1280px/16
+    @media only screen and (max-width: 80em) { @content };
   }
+
+  //default is 1280px - 1800px
 
   @if $breakpoint == xl {
     //calc > 1800px 

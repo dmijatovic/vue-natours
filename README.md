@@ -126,7 +126,6 @@ Different approach for html (img tags) and scss styles. In html use srcset inste
   <!-- ard direction 
     define different images for one image based on media query
   -->
-
   <picture class="logo">
     <!-- for small screens -->
     <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" 
@@ -134,4 +133,56 @@ Different approach for html (img tags) and scss styles. In html use srcset inste
     <!-- other screen sizes -->
     <img  srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="image" />
   </picture>
+
+  <!--RESOLUTION SWITHING-->
+  <!-- 
+    srcset = inform browser about image width 
+    sizes = inform browser what space the image takes of the viewport width, lastone is default
+    src = 'old' src info for older browser
+  -->
+  <img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+      sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+      src="img/nat-1.jpg" 
+      alt="Just an image"
+  />
+```
+
+Using media queries in SCSS
+```scss
+  //default image
+  background-image: url('img/hero-small.jpg');
+  // if resolution dpi is high (2x) and width > 600px/16 (not mobile),
+  // OR safari has different version for pixel ratio
+  // OR screen size > 2000px (4K in em)
+  @media (min-resolution: 192dpi) and (min-width: 37.5em),
+    (-webkit-min-device-pixel-ratio) and (min-width: 37.5em),
+    (min-width:125em){
+    background-image: url('img/hero-large.jpg');
+  } 
+
+```
+
+### Graceful degradation
+
+Using @supports feature query
+
+```scss
+  //if browser supports clip-path - use it
+  //default set-up is then without this feature
+  @supports(clip-path:polygon(0 0)){
+    //clip-path to create image cut effect
+    //polygoon (x-left-top y-left-top, x-right-top y-right-top, x-bottom-right y-bottom-right)
+    clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+  }
+
+```
+
+### Identify touch devices using media query
+
+```scss
+  //apply this css when device does not support hover
+  @media only screen and (hover: none){
+    //your styles for touch devices here! 
+  }
+
 ```

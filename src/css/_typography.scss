@@ -38,3 +38,9 @@
   }
 
 }
+
+//change style of selected text
+::selection{
+  background-color: $color-1st-dark;
+  color: $light-color;
+}

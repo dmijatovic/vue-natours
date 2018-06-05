@@ -5,20 +5,39 @@
   position: relative;
   display: flex;
   justify-content: center;
-  height: 95vh;
+  height: 85vh;
   //multiple images at background - lastone is at the top
   //gradient uses opacity
   background-image: linear-gradient(
     to right bottom, 
     $gradient-start, 
     $gradient-end), 
-    url('../../assets/img/hero.jpg');
+    url('../../assets/img/hero-small.jpg');
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  //clip-path to create image cut effect
-  //polygoon (x-left-top y-left-top, x-right-top y-right-top, x-bottom-right y-bottom-right)
-  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+
+  //if browsers support clip-path 
+  //we will increase height and cut lower part of the image
+  @supports(clip-path: polygon(0 0)){
+    //increase the height
+    height: 95vh;
+    //clip-path to create image cut effect
+    //polygoon (x-left-top y-left-top, x-right-top y-right-top, x-bottom-right y-bottom-right)
+    clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+  }
+  
+  //RESPONSIVE images
+  //FOR HD screens (apple 192dpi) wider than 600px (not mobile)
+  //OR screen min-width > 2000px (for 4K screens)
+  @media (min-resolution:192dpi) and (min-width: 37.5em),
+    (min-width:125em){
+    background-image: linear-gradient(
+    to right bottom, 
+    $gradient-start, 
+    $gradient-end), 
+    url('../../assets/img/hero.jpg');  
+  }
 
   //& wil repeat parent selector
   //note! this is not nesting for specificity but the trick 
@@ -38,7 +57,6 @@
     align-self: center;  
   }
 }
-
 
 .heading-primary{
   color: #fff;

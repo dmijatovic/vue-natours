@@ -7,9 +7,9 @@
   menuItems:[{
     link:'#1', label:"Menu item 1", faIco:"fas fa-home"
   },{
-    link:'#2', label:"Menu item 2", faIco:"fas fa-home"
+    link:'#2', label:"Menu item 2", faIco:"fab fa-affiliatetheme"
   },{
-    link:'#3', label:"Menu item 3", faIco:"fas fa-home"
+    link:'#3', label:"Menu item 3", faIco:"fas fa-allergies"
   }],
   //HERO section
   hero:{
@@ -20,7 +20,7 @@
       link:'#section-tours'
     },
     logo:{
-      img:'img/logo-green-1x.png 1x, img/logo-green-2x.png 2x'
+      img:'img/logo-white.png 1x, img/logo-green-2x.png 2x'
     } 
   },
   about:{
@@ -50,28 +50,28 @@
   },
   //supports 4 features
   features:[{
-    faIco: 'fas fa-home',
+    faIco: 'fas fa-american-sign-language-interpreting',
     link:'',
     title: 'This is title 1',
     body:`
     This is the body of this item
     ` 
   },{
-    faIco: 'fas fa-home',
+    faIco: 'fas fa-anchor',
     link:'',
     title: 'This is title 2',
     body:`
     This is the body of this item
     ` 
   },{
-    faIco: 'fas fa-home',
+    faIco: 'fab fa-vuejs',
     link:'',
     title: 'This is title 3',
     body:`
     This is the body of this item
     ` 
   },{
-    faIco: 'fas fa-home',
+    faIco: 'fab fa-angular',
     link:'',
     title: 'This is title 4',
     body:`
